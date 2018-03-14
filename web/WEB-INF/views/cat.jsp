@@ -2,10 +2,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <head>
+        <link rel="stylesheet" href="/Cats2/styles/styles.css">
     </head>
     <body>
-        <h1>Color is: ${color} </h1>
+
+        <p>A ${cat.color} cat:</p>
+        <img src=${cat.image} width="300"><br>
+        <br><div><a href="/Cats2/main">Back to Main Menu</a></div><br>
     </body>
 </html>

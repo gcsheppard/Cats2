@@ -2,8 +2,8 @@
 package edu.acc.jweb.cats2;
 
 public class Cat {
-    private String color;
-    private String image;
+    public String color;
+    public String image;
 
     public Cat(String color, String image) {
         this.color = color;
