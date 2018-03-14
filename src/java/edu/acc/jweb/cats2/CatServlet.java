@@ -16,13 +16,9 @@ public class CatServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {        
-        //req.setAttribute("color", "calico");
-        //getServletContext().getRequestDispatcher("/WEB-INF/views/cat.jsp").forward(request, response);
-
         if (cats.isEmpty()) {
             cats = getCats();
         }
-        
         String choice = request.getParameter("choice");
         if (choice == null) {
             request.setAttribute("cats", cats);
@@ -31,8 +27,6 @@ public class CatServlet extends HttpServlet {
         else {
             Cat cat = findCat(choice);
             request.setAttribute("cat", cat);
-            request.setAttribute("color", "calico");
-            request.setAttribute("choice", choice);
             getServletContext().getRequestDispatcher("/WEB-INF/views/cat.jsp").forward(request, response);
         }
     }
